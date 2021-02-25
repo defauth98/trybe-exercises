@@ -19,4 +19,7 @@ switch (piece.toLowerCase()) {
   case 'pawns':
     console.log('move one forward');
     break;
+  default:
+    console.log('ERRO, peça invalida');
+    break;
 }
