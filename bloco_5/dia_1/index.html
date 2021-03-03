@@ -76,10 +76,18 @@
         title.innerText = 'Exercício 5.1 - Javascript';
       }
 
+      function changeParagraphTextToUpperCase() {
+        const paragraph = document.getElementsByTagName('p')[0];
+        const paragraphContent = paragraph.innerText;
+
+        paragraph.innerText = paragraphContent.toUpperCase();
+      }
+
       changeText();
       changeSquareColorToGreen();
       changeSquareColorToWhite();
       changeTitleContent();
+      changeParagraphTextToUpperCase();
     </script>
   </body>
 </html>
