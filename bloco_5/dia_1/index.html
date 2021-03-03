@@ -58,14 +58,21 @@
         paragraph.innerText = 'Eu quero me tornar um desenvolvedor junior';
       }
 
-      function changeSquareColor() {
+      function changeSquareColorToGreen() {
         const square = document.getElementsByClassName('main-content')[0];
 
         square.style.backgroundColor = 'rgb(76,164,109)';
       }
 
+      function changeSquareColorToWhite() {
+        const square = document.getElementsByClassName('center-content')[0];
+
+        square.style.backgroundColor = 'white';
+      }
+
       changeText();
-      changeSquareColor();
+      changeSquareColorToGreen();
+      changeSquareColorToWhite();
     </script>
   </body>
 </html>
