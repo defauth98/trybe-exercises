@@ -5,14 +5,18 @@ const div2 = document.createElement('div');
 const div3 = document.createElement('div');
 const div4 = document.createElement('div');
 const paragraph = document.createElement('p');
+const image = document.createElement('img');
 
 div1.classList.add('main-content');
 div2.classList.add('center-content');
 div3.classList.add('left-content');
 div4.classList.add('right-content');
+image.classList.add('small-image');
 
 title.innerHTML = 'Exercício 5.2 - JavaScript DOM';
 paragraph.innerHTML = 'Exercicios sobre criação de elemento na dom via JS';
+
+image.src = 'https://picsum.photos/200';
 
 div1.appendChild(div2);
 div1.appendChild(div3);
