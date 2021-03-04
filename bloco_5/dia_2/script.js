@@ -1,40 +1,70 @@
 const body = document.body;
+
+// Exercise - 01
 const title = document.createElement('h1');
-const mainContentDiv = document.createElement('div');
-const centerContentDiv = document.createElement('div');
-const leftContentDiv = document.createElement('div');
-const rightContentDiv = document.createElement('div');
-const paragraph = document.createElement('p');
-const image = document.createElement('img');
-const list = document.createElement('ul');
-
-mainContentDiv.classList.add('main-content');
-centerContentDiv.classList.add('center-content');
-leftContentDiv.classList.add('left-content');
-rightContentDiv.classList.add('right-content');
-image.classList.add('small-image');
-title.classList.add('title');
-
 title.innerHTML = 'Exercício 5.2 - JavaScript DOM';
-paragraph.innerHTML = 'Exercicios sobre criação de elemento na dom via JS';
+body.appendChild(title);
 
+// Exercise - 02
+const mainContentDiv = document.createElement('div');
+mainContentDiv.classList.add('main-content');
+body.appendChild(mainContentDiv);
+
+// Exercise - 03
+const centerContentDiv = document.createElement('div');
+centerContentDiv.classList.add('center-content');
+mainContentDiv.appendChild(centerContentDiv);
+
+// Exercise - 04
+const paragraph = document.createElement('p');
+paragraph.innerHTML = 'Algum texto qualquer';
+centerContentDiv.appendChild(paragraph);
+
+// Exercise - 05
+const leftContentDiv = document.createElement('div');
+leftContentDiv.classList.add('left-content');
+mainContentDiv.appendChild(leftContentDiv);
+
+// Exercise - 06
+const rightContentDiv = document.createElement('div');
+rightContentDiv.classList.add('right-content');
+mainContentDiv.appendChild(rightContentDiv);
+
+// Exercise - 07
+const image = document.createElement('img');
+image.classList.add('small-image');
 image.src = 'https://picsum.photos/200';
+leftContentDiv.appendChild(image);
 
-for (let index = 0; index < 10; index += 1) {
+// Exercise - 08
+const list = document.createElement('ul');
+title.classList.add('title');
+const numbersArray = [
+  'Um',
+  'Dois',
+  'Três',
+  'Quatro',
+  'Cinco',
+  'Seis',
+  'Sete',
+  'Oito',
+  'Novo',
+  'Dez',
+];
+for (let index in numbersArray) {
   const listItem = document.createElement('li');
-
-  listItem.innerHTML = index + 1;
-
+  listItem.innerHTML = numbersArray[index];
   list.appendChild(listItem);
 }
 
+// Exercise - 09
 for (let index = 0; index < 3; index += 1) {
   const title = document.createElement('h1');
-
   title.classList.add('description');
-
   mainContentDiv.appendChild(title);
 }
+
+// Segunda parte dos exercícios:
 
 rightContentDiv.style.marginRight = 'auto';
 centerContentDiv.style.backgroundColor = 'green';
@@ -44,15 +74,4 @@ list.lastChild.remove();
 list.lastChild.remove();
 
 rightContentDiv.appendChild(list);
-leftContentDiv.appendChild(image);
-
-mainContentDiv.appendChild(centerContentDiv);
-mainContentDiv.appendChild(leftContentDiv);
-mainContentDiv.appendChild(rightContentDiv);
-
-centerContentDiv.appendChild(paragraph);
-
 mainContentDiv.removeChild(leftContentDiv);
-
-body.appendChild(title);
-body.appendChild(mainContentDiv);
