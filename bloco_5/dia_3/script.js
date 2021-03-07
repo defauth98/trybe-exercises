@@ -110,7 +110,8 @@ function zoomOnDays(){
     })
 
     days[index].addEventListener('mouseout', () => {
-      days[index].style.transform = 'scale(1)';
+      days[index].style.transform = '';
+      days[index].style.cursor = '';
     })
   }
 }
@@ -134,6 +135,17 @@ function createLegendForTask(color){
   myTaskContainer.appendChild(legendContainer);
 }
 
+// Exercício - 09
+function toggleSelected(){
+  const legendContainerElements = document.getElementsByClassName('task');
+
+  for(let index = 0; index < legendContainerElements.length; index +=1){
+    legendContainerElements[index].addEventListener('click', () => {
+      legendContainerElements[index].classList.toggle('selected');
+    })
+  }  
+}
+
 createDaysOfTheWeek();
 createCalendarDays();
 createHolidayButton();
@@ -143,3 +155,4 @@ addClickEventOnFridayButton();
 zoomOnDays();
 createTasks('Cozinhar');
 createLegendForTask('green');
+toggleSelected();
