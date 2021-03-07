@@ -114,6 +114,15 @@ function zoomOnDays(){
   }
 }
 
+// Exercício - 07
+function createTasks(taskName){
+  const taskElement = document.createElement('span');
+  taskElement.innerHTML = taskName;
+
+  const taskContainer = document.getElementsByClassName('my-tasks')[0];
+  taskContainer.appendChild(taskElement);
+}
+
 createDaysOfTheWeek();
 createCalendarDays();
 createHolidayButton();
@@ -121,3 +130,4 @@ addClickEvent();
 createFridayButton('Sexta-Feira');
 addClickEventOnFridayButton();
 zoomOnDays();
+createTasks('Cozinhar');
