@@ -146,6 +146,24 @@ function toggleSelected(){
   }  
 }
 
+// Exercício - 10
+function addLegendToDay(){
+  const days = document.getElementsByClassName('day');
+  
+
+  for(let index = 0; index < days.length; index += 1){
+    days[index].addEventListener('click', () => {
+      const selectedColor = document.getElementsByClassName('selected')[0].style.backgroundColor
+
+      if(days[index].style.backgroundColor === selectedColor){
+        days[index].style.backgroundColor = 'rgb(119,119,119)'
+      } else {
+        days[index].style.backgroundColor = selectedColor;
+      }
+    })
+  }
+}
+
 createDaysOfTheWeek();
 createCalendarDays();
 createHolidayButton();
@@ -156,3 +174,4 @@ zoomOnDays();
 createTasks('Cozinhar');
 createLegendForTask('green');
 toggleSelected();
+addLegendToDay()
