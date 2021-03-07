@@ -48,13 +48,32 @@ function createCalendarDays() {
 function createHolidayButton(){
   const buttonElement = document.createElement('button');
   buttonElement.id = 'btn-holiday';
+  buttonElement.innerHTML = 'Feriados'
 
   const buttonsContainerElement = document.getElementsByClassName('buttons-container')[0];
-  
   buttonsContainerElement.appendChild(buttonElement);
 
+}
+
+// Exercício - 03
+function addClickEvent(){
+  const button = document.getElementById('btn-holiday');
+
+  button.addEventListener('click', () => {
+    const days = document.getElementsByClassName('holiday')
+
+    for(let index = 0; index < days.length; index += 1){
+      if(days[index].style.backgroundColor === 'blue'){
+        days[index].style.backgroundColor = 'rgb(238,238,238)';
+      } else {
+        days[index].style.backgroundColor = 'blue';
+        days[index].style.border = '1px solid white'
+      }
+    }
+  })
 }
 
 createDaysOfTheWeek();
 createCalendarDays();
 createHolidayButton();
+addClickEvent()
