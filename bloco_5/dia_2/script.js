@@ -69,7 +69,7 @@ for (let index = 0; index < 3; index += 1) {
 rightContentDiv.style.marginRight = 'auto';
 centerContentDiv.style.backgroundColor = 'green';
 
-// Referência: Gabarito da trybe
+// Referência: Gabarito da Trybe
 list.lastChild.remove();
 list.lastChild.remove();
 
