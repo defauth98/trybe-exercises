@@ -67,12 +67,12 @@ function addClickEvent(){
         days[index].style.backgroundColor = 'rgb(238,238,238)';
       } else {
         days[index].style.backgroundColor = 'blue';
-        days[index].style.border = '1px solid white'
       }
     }
   })
 }
 
+// Exercício - 04
 function createFridayButton(innerHTMLButton){
   const fridayButtonElement = document.createElement('button');
   fridayButtonElement.id = 'btn-friday';
@@ -82,8 +82,25 @@ function createFridayButton(innerHTMLButton){
   buttonsContainerElement.appendChild(fridayButtonElement);
 }
 
+// Exercício - 05
+function addClickEventOnFridayButton(){
+  const fridayButton = document.getElementById('btn-friday');
+  const fridays = document.getElementsByClassName('friday')
+
+  fridayButton.addEventListener('click', () => {
+    for(let index = 0; index < fridays.length; index+=1){
+      if(fridays[index].style.backgroundColor === 'black'){
+        fridays[index].style.backgroundColor = 'rgb(238,238,238)';
+      } else {
+        fridays[index].style.backgroundColor = 'black';
+      }
+    }
+  })
+}
+
 createDaysOfTheWeek();
 createCalendarDays();
 createHolidayButton();
 addClickEvent();
 createFridayButton('Sexta-Feira');
+addClickEventOnFridayButton();
