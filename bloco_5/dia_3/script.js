@@ -73,7 +73,17 @@ function addClickEvent(){
   })
 }
 
+function createFridayButton(innerHTMLButton){
+  const fridayButtonElement = document.createElement('button');
+  fridayButtonElement.id = 'btn-friday';
+  fridayButtonElement.innerHTML = innerHTMLButton
+
+  const buttonsContainerElement = document.getElementsByClassName('buttons-container')[0];
+  buttonsContainerElement.appendChild(fridayButtonElement);
+}
+
 createDaysOfTheWeek();
 createCalendarDays();
 createHolidayButton();
-addClickEvent()
+addClickEvent();
+createFridayButton('Sexta-Feira');
