@@ -66,12 +66,29 @@ for (let index = 0; index < 3; index += 1) {
 
 // Segunda parte dos exercícios:
 
-rightContentDiv.style.marginRight = 'auto';
-centerContentDiv.style.backgroundColor = 'green';
+// Exercise - 01
+const titleElement = getElementsByTagName('h1')[0];
+titleElement.classList.add('title');
 
+// Exercise - 02
+const descriptionTitleElement = getElementsByTagName('h3');
+for(let index = 0; index < 3; index+=1){
+  descriptionTitleElement[index].classList.add('description');
+}
+
+// Exercise - 03 
+const leftContentDiv = document.getElementsByClassName('left-content');
+document.body.removeChild(leftContentDiv)
+
+// Exercise - 04
+const rightContentContainer = document.getElementsByClassName('right-content');
+rightContentContainer.style.marginRight = 'auto';
+
+// Exercise - 05
+const rightContentContainer = document.getElementsByClassName('main-content');
+rightContentContainer.style.backgroundColor = 'green';
+
+// Exercise - 06
 // Referência: Gabarito da Trybe
 list.lastChild.remove();
 list.lastChild.remove();
-
-rightContentDiv.appendChild(list);
-mainContentDiv.removeChild(leftContentDiv);
