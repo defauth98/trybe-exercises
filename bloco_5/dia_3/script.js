@@ -106,6 +106,7 @@ function zoomOnDays(){
   for(let index = 0; index < days.length; index += 1){
     days[index].addEventListener('mouseover', () => {
       days[index].style.transform = 'scale(2)';
+      days[index].style.cursor = 'pointer';
     })
 
     days[index].addEventListener('mouseout', () => {
@@ -123,6 +124,16 @@ function createTasks(taskName){
   taskContainer.appendChild(taskElement);
 }
 
+// Exercício - 08
+function createLegendForTask(color){
+  const legendContainer = document.createElement('div');
+  legendContainer.classList.add('task');
+  legendContainer.style.backgroundColor = color;
+
+  const myTaskContainer = document.getElementsByClassName('my-tasks')[0];
+  myTaskContainer.appendChild(legendContainer);
+}
+
 createDaysOfTheWeek();
 createCalendarDays();
 createHolidayButton();
@@ -131,3 +142,4 @@ createFridayButton('Sexta-Feira');
 addClickEventOnFridayButton();
 zoomOnDays();
 createTasks('Cozinhar');
+createLegendForTask('green');
