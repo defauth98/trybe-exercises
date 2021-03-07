@@ -98,9 +98,26 @@ function addClickEventOnFridayButton(){
   })
 }
 
+// Exercício - 06
+// Reference: https://www.w3schools.com/howto/howto_css_zoom_hover.asp
+function zoomOnDays(){
+  const days = document.getElementsByClassName('day');
+
+  for(let index = 0; index < days.length; index += 1){
+    days[index].addEventListener('mouseover', () => {
+      days[index].style.transform = 'scale(2)';
+    })
+
+    days[index].addEventListener('mouseout', () => {
+      days[index].style.transform = 'scale(1)';
+    })
+  }
+}
+
 createDaysOfTheWeek();
 createCalendarDays();
 createHolidayButton();
 addClickEvent();
 createFridayButton('Sexta-Feira');
 addClickEventOnFridayButton();
+zoomOnDays();
