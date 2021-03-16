@@ -46,8 +46,8 @@
 
       <div id="type-container">
         <label for="type">Tipo: </label>
-        <input type="radio" id="type" name="type" length="28" required> Casa</input>
-        <input type="radio" id="type" name="type" length="28" required> Apartamento</input>
+        <input type="radio" id="type-house" name="type" length="28" required> Casa</input>
+        <input type="radio" id="type-appartment" name="type" length="28" required> Apartamento</input>
       </div>
 
     </fieldset>
@@ -73,7 +73,16 @@
         <input type="date" name="date" id="date" required>
       </div>
     </fieldset>
+
+    <button id="render-curriculum">Gerar Currículo</button>
   </form>
+
+  <session >
+    <div id="curriculum">
+
+    </div>
+  </session>
+
 
   <script src="script.js"></script>
 </body>
