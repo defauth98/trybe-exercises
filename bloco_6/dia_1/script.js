@@ -41,4 +41,32 @@ function addSelectOptions(){
   }
 }
 
+function validadeData(data){
+  if(data.indexOf('/') === 2 &&  data.indexOf('/') === 5){
+    const day = data.substr(0,2);
+    const month = data.substr(3,2);
+    const year = data.substr(6,4);
+    if((day > 0 && day <= 31) && (month > 0 && month <= 12)){
+      return true;
+    }
+
+    return false;
+  }
+}
+
+function checkData(){
+  const dateInputElement = document.getElementById('date');
+
+  let data = dateInputElement.value;
+  const dataUser = validadeData(data);
+
+  if(!dataUser && data.length){
+    dataInputElement.value = '';
+    alert('data invalida');
+    return false;
+  }
+
+  return dataUser;
+}
+
 window.onload = addSelectOptions;

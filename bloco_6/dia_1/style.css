@@ -18,24 +18,33 @@ input[type="text"] {
   color: #403e3b;
 }
 
+
+
 select {
   margin-bottom: 8px;
   font-size: 18px;
   color: #403e3b;
 }
 
+.form-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 340px;
+}
 
 #page-title {
   margin-top: 30px;
   margin-left: 65px;
 }
 
-#people-info {
+#people-info, #last-job {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  width: 80%;
   padding: 30px;
-  width: 90%;
   display: flex;
   flex-direction: column;
   background-color: rgb(129, 122, 122);
@@ -48,3 +57,5 @@ select {
 #type-container input {
   margin-left: 4px;
 }
+
+
