@@ -76,7 +76,7 @@ function renderCurriculum (){
 
   const curriculumNameElement = document.getElementById('curriculum-name');
   if(curriculumNameElement){
-    alert('Curriculo ja foi criado');
+    alert('Currículo ja foi criado');
     return;
   }
 
@@ -175,9 +175,44 @@ function renderCurriculum (){
   curriculumSession.appendChild(officeDescriptionElement);
 }
 
+function clearAllFields(){
+  event.preventDefault();
+
+  const curriculumSession = document.getElementById('curriculum');
+  const nameInputElement = document.getElementById('name');
+  const emailInputElement = document.getElementById('email');
+  const cpfInputElement = document.getElementById('cpf');
+  const addressInputElement = document.getElementById('address');
+  const cityInputElement = document.getElementById('city');
+  const stateInputElement = document.getElementById('state');
+  const typeHouseInputElement = document.getElementById('type-house');
+  const typeApartmentInputElement = document.getElementById('type-house');
+  const resumeInputElement = document.getElementById('resume');
+  const officeInputElement = document.getElementById('office');
+  const officeDescriptionInputElement = document.getElementById('office-description');
+  const dateInputElement = document.getElementById('date');
+
+  curriculumSession.innerHTML = '';
+  nameInputElement.value = '';
+  emailInputElement.value = '';
+  cpfInputElement.value = '';
+  addressInputElement.value = '';
+  cityInputElement.value = '';
+  stateInputElement.value = '';
+  typeHouseInputElement.value = '';
+  typeApartmentInputElement.value = '';
+  resumeInputElement.value = '';
+  officeInputElement.value = '';
+  officeDescriptionInputElement.value = '';
+  dateInputElement.value = '';
+}
+
 window.onload = () => {
   addSelectOptions();
 
   const renderButton = document.getElementById('render-curriculum');
   renderButton.onclick = () => renderCurriculum();
+
+  const clearButton = document.getElementById('clear');
+  clearButton.onclick = () => clearAllFields();
 };

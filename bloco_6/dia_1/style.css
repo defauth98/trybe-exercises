@@ -61,7 +61,7 @@ select {
   margin-top: 20px;
 }
 
-#render-curriculum {
+#render-curriculum, #clear {
   font-size: 20px;
   padding: 4px;
 }
