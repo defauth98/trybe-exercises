@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastre seu currículo</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link href="css/validation.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h4 id="page-title" class="center-align">Cadastre seu currículo</h4>
+
+  <form action="" method="post">
+    <fieldset id="people-info" class="z-depth-2">
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="name" type="text" class="validate"  required>
+          <label for="name">Nome</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="email" type="text" class="validate" data-validate="required,email" required>
+          <label for="email">Email</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="cpf" type="text" class="validate" required>
+          <label for="cpf">CPF</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="address" type="text" class="validate" required>
+          <label for="address">Endereço</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="city" type="text" class="validate" required>
+          <label for="city">Cidade</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="state" type="text" class="validate" required>
+          <label for="state">Estado</label>
+        </div>
+      </div>
+      
+      <span>Complemento</span>
+
+      <p>
+        <label>
+          <input id="type-house" name="type" type="radio" />
+          <span>Casa</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input id="type-appartment" name="type" type="radio" />
+          <span>Apartamento</span>
+        </label>
+      </p>
+
+    </fieldset>
+
+    <fieldset id="last-job" class="z-depth-2">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="resume" class="materialize-textarea" cols="30" rows="5" length="500"></textarea>
+          <label for="resume">Resumo</label>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input  id="office" type="text" class="validate" required>
+          <label for="office">Cargo</label>
+        </div>
+      </div>  
+
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="office-description" class="materialize-textarea" cols="30" rows="5" length="500"></textarea>
+          <label for="office-description">Descrição do cargo</label>
+        </div>
+      </div>
+
+      <label for="date">Data de inicio:</label>
+      <input type="text" id="datepicker">
+
+    </fieldset>
+
+    <a class="waves-effect waves-light btn" id="render-curriculum">Gerar currículo</a>
+    <a class="waves-effect waves-light btn" id="clear" class="margin-bottom">Limpar campos</a>
+  </form>
+
+  <session >
+    <div id="curriculum"class="margin-bottom" ></div>
+  </session>
+
+
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="js/validation.min.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>

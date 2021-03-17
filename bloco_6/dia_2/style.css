@@ -1,0 +1,38 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+form {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset {
+  margin-bottom:30px;
+  border: 1px solid #c5c5c5;
+}
+
+
+.margin-bottom {
+  margin-bottom: 50px;
+}
+
+.row .col.s6 {
+  width: 100%;
+}
+
+#curriculum {
+  width: 50%;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  /* border: 1px solid #c5c5c5; */
+  padding: 20px;
+}
+
+.margin-bottom {
+  margin-bottom: 50px;
+}
