@@ -92,7 +92,7 @@ function renderCurriculum (){
   const resumeInputElement = document.getElementById('resume');
   const officeInputElement = document.getElementById('office');
   const officeDescriptionInputElement = document.getElementById('office-description');
-  const dateInputElement = document.getElementById('date');
+  const dateInputElement = document.getElementById('datepicker');
 
   let name = nameInputElement.value;
   let email = emailInputElement.value;
@@ -114,16 +114,18 @@ function renderCurriculum (){
     type = 'Casa';
   }
 
+  console.log(name, email, cpf, address, city,state, resume,office, officeDescription, date, type)
+
   if(!name || !email || !cpf || !address || !city || !state || !type || !resume || !office || !officeDescription || !date){
     alert('Necessário preencher as informações');
     return;
   }
 
-  const titleElement = document.createElement('h1');
+  const titleElement = document.createElement('h4');
   titleElement.innerHTML = name;
   titleElement.id = 'curriculum-name';
 
-  const emailElement = document.createElement('h2');
+  const emailElement = document.createElement('h5');
   emailElement.innerHTML = email;
   emailElement.id = 'curriculum-email';
 
@@ -173,6 +175,7 @@ function renderCurriculum (){
   curriculumSession.appendChild(resumeElement);
   curriculumSession.appendChild(officeElement);
   curriculumSession.appendChild(officeDescriptionElement);
+  curriculumSession.appendChild(dateElement);
 }
 
 function clearAllFields(){
@@ -190,7 +193,7 @@ function clearAllFields(){
   const resumeInputElement = document.getElementById('resume');
   const officeInputElement = document.getElementById('office');
   const officeDescriptionInputElement = document.getElementById('office-description');
-  const dateInputElement = document.getElementById('date');
+  const dateInputElement = document.getElementById('datepicker');
 
   curriculumSession.innerHTML = '';
   nameInputElement.value = '';
@@ -215,4 +218,25 @@ window.onload = () => {
 
   const clearButton = document.getElementById('clear');
   clearButton.onclick = () => clearAllFields();
+
+  var picker = new Pikaday({
+    field: document.getElementById('datepicker'),
+    format: 'D/M/YYYY',
+    toString(date, format) {
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+    },
+    parse(dateString, format) {
+        const parts = dateString.split('/');
+        const day = parseInt(parts[0], 10);
+        const month = parseInt(parts[1], 10) - 1;
+        const year = parseInt(parts[2], 10);
+        return new Date(year, month, day);
+    }
+  });
+
+  validation.init();
+  validation.highlight();
 };

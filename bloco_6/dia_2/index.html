@@ -9,6 +9,8 @@
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+  <link href="css/validation.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,14 +20,14 @@
     <fieldset id="people-info" class="z-depth-2">
       <div class="row">
         <div class="input-field col s6">
-          <input  id="name" type="text" class="validate" required>
+          <input  id="name" type="text" class="validate"  required>
           <label for="name">Nome</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s6">
-          <input  id="email" type="text" class="validate" required>
+          <input  id="email" type="text" class="validate" data-validate="required,email" required>
           <label for="email">Email</label>
         </div>
       </div>
@@ -62,13 +64,13 @@
 
       <p>
         <label>
-          <input id="type-house" name="group1" type="radio" checked />
+          <input id="type-house" name="type" type="radio" />
           <span>Casa</span>
         </label>
       </p>
       <p>
         <label>
-          <input id="type-appartment" name="group1" type="radio" />
+          <input id="type-appartment" name="type" type="radio" />
           <span>Apartamento</span>
         </label>
       </p>
@@ -99,20 +101,23 @@
       </div>
 
       <label for="date">Data de inicio:</label>
-      <input type="date" id="date" class="datepicker">
+      <input type="text" id="datepicker">
 
     </fieldset>
 
     <a class="waves-effect waves-light btn" id="render-curriculum">Gerar currículo</a>
-    <a class="waves-effect waves-light btn" id="clear">Limpar campos</a>
+    <a class="waves-effect waves-light btn" id="clear" class="margin-bottom">Limpar campos</a>
   </form>
 
   <session >
-    <div id="curriculum" class="margin-bottom"></div>
+    <div id="curriculum"class="margin-bottom" ></div>
   </session>
 
 
-  <script src="script.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="js/validation.min.js"></script>
+  <script src="script.js"></script>
+  
 </body>
 </html>
