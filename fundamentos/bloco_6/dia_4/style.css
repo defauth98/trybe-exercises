@@ -42,9 +42,8 @@ body {
 }
 
 @media (min-width: 768px){
-  
-  
   .menu-container {
     flex-basis: 100%;
+    align-self: center;
   }
 }
