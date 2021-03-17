@@ -24,7 +24,7 @@ body {
 .menu-container {
   display: flex;
   flex-basis: 500px; 
-  order: 2; 
+  order: 2;  
 }
 
 .menu-container ul {
@@ -39,4 +39,12 @@ body {
   font-size: 1.3rem;
   list-style: none;
   margin-right: 10px;
+}
+
+@media (min-width: 768px){
+  
+  
+  .menu-container {
+    flex-basis: 100%;
+  }
 }
