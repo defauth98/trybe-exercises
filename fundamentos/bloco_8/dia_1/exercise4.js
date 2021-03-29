@@ -8,7 +8,11 @@ const test = (templateArray, studentAnswers, checkAnwer) => {
   for (let index = 0; index < studentAnswers.length; index++) {
     if(checkAnwser(studentAnswers[index], templateAnswers[index]) === true){
       pointsCounter += 1;
-    } else {
+    } 
+    else if(studentAnswers[index] === 'N.A'){
+      pointsCounter += 0;
+    }
+    else {
       pointsCounter -= 0.5;
     }
   }
