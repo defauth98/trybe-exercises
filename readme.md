@@ -34,7 +34,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 4-2: _JavaScript - Array e loop For_
 - [x] 4-3: _JavaScript - Lógica de Programação e Algoritmos_
 - [x] 4-4: _JavaScript - Objetos e funções_
-- [ ] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-010-a-project-playground-functions/pull/126)_
+- [x] 4-5: _[Projeto - Playground Functions](https://github.com/tryber/sd-010-a-project-playground-functions/pull/126)_
 
 ##### Bloco 5: Introdução - JavaScript - Projetos
 
@@ -42,11 +42,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
 - [x] 5-3: _JavaScript - Eventos_
 - [x] 5-4: _JavaScript - Web Storage_
-- [ ] 5-5: _[Projeto - Meme Generator]()_
+- [x] 5-5: _[Projeto - Meme Generator](https://defauth98.github.io./projects/meme-generator/index.html)_
 - [x] 5-6: _[Projeto - Arte com Pixels](https://defauth98.github.io./projects/pixels-art/index.html)_
 - [x] 5-7: _[Projeto - Lista de tarefas](https://defauth98.github.io./projects/todo-list/index.html)_
-- [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
-- [ ] 5-7: _[Projeto - Carta Misteriosa]()_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](https://defauth98.github.io./projects/color-guess/index.html)_
+- [x] 5-7: _[Projeto - Carta Misteriosa](https://defauth98.github.io./projects/mistery-letter/index.html)_
 
 ##### Bloco 6: HTML & CSS avançado
 
@@ -62,7 +62,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 7-1: _JavaScript ES6 - let, const, arrow functions e template literals_
 - [x] 7-2: _JavaScript ES6 - Objects_
 - [x] 7-3: _Testes unitários em JavaScript_
-- [ ] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/72)_
+- [x] 7-4: _[Projeto - JavaScript Testes Unitários](https://github.com/tryber/sd-010-a-project-js-unit-tests/pull/72)_
 
 ##### Bloco 8: JavaScript ES6
 
