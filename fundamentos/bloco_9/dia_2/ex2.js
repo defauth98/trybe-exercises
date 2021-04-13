@@ -5,7 +5,7 @@ const fetchPromise = () => {
       () =>  Math.floor(Math.random() * 50) + 1
     );
     const sum = myArray.map(number => number * number)
-                       .reduce((number, acc) => number + acc, 0);
+    .reduce((number, acc) => number + acc, 0);
 
     (sum < 8000) ? resolve(sum) : reject();
   });
