@@ -1,27 +1,21 @@
-const promise = new Promise((resolve, reject) => {
-  const numbers = [];
-  let soma = 0;
+const fetchPromise = () => {
+  const myPromise = new Promise((resolve, reject) => {
+    const myArray = Array.from(
+      { length: 10 },
+      () =>  Math.floor(Math.random() * 50) + 1
+    );
+    const sum = myArray.map(number => number * number)
+                       .reduce((number, acc) => number + acc, 0);
 
-  for(let index = 0; index < 10; index += 1){
-    numbers[index] = Math.random() * 50;
-  }
+    (sum < 8000) ? resolve(sum) : reject();
+  });
 
-  numbers.forEach(number => {
-    soma += (number * number);
-  })
+  myPromise
+    .then(sum => [2, 3, 5, 10].map(number => sum / number))
+    .then(array => array.reduce((number, acc) => number + acc, 0))
+    .catch(() =>
+      console.log('É mais de oito mil! Essa promise deve estar quebrada!')
+    );
+};
 
-  if(soma < 8000){   
-    const item1 = (soma / 2).toFixed(2);
-    const item2 = (soma / 3).toFixed(2);
-    const item3 = (soma / 5).toFixed(2);
-    const item4 = (soma / 10).toFixed(2);
-    const numbersArray = [item1, item2, item3, item4];
-
-    resolve(numbersArray);
-  } else {
-    reject();
-  }
-
-})
-  .then((numbers) => console.log('Promise resolvida', numbers))
-  .catch(() => console.log('Promise rejeitada'))
+fetchPromise();
