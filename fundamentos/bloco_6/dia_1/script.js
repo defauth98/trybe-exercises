@@ -1,6 +1,6 @@
-function addSelectOptions(){
+function addSelectOptions() {
   const stateSelectElement = document.getElementById('state');
-  
+
   const brazilStates = [
     'Acre',
     'Alagoas',
@@ -30,24 +30,24 @@ function addSelectOptions(){
     'Sergipe',
     'Tocantins',
   ];
-  
-  for(let index = 0; index < brazilStates.length; index += 1){
+
+  for (let index = 0; index < brazilStates.length; index += 1) {
     const optionElement = document.createElement('option');
 
     optionElement.innerHTML = brazilStates[index];
     optionElement.value = brazilStates[index];
-    
+
     stateSelectElement.appendChild(optionElement);
   }
 }
 
 // Referencia: Gabarito da Trybe
-function validadeData(data){
-  if(data.indexOf('/') === 2 &&  data.indexOf('/') === 5){
-    const day = data.substr(0,2);
-    const month = data.substr(3,2);
-    const year = data.substr(6,4);
-    if((day > 0 && day <= 31) && (month > 0 && month <= 12)){
+function validadeData(data) {
+  if (data.indexOf('/') === 2 && data.indexOf('/') === 5) {
+    const day = data.substr(0, 2);
+    const month = data.substr(3, 2);
+    const year = data.substr(6, 4);
+    if (day > 0 && day <= 31 && month > 0 && month <= 12) {
       return true;
     }
 
@@ -56,13 +56,13 @@ function validadeData(data){
 }
 
 // Referencia: Gabarito da Trybe
-function checkData(){
+function checkData() {
   const dateInputElement = document.getElementById('date');
 
   let data = dateInputElement.value;
   const dataUser = validadeData(data);
 
-  if(!dataUser && data.length){
+  if (!dataUser && data.length) {
     dataInputElement.value = '';
     alert('data invalida');
     return false;
@@ -71,11 +71,11 @@ function checkData(){
   return dataUser;
 }
 
-function renderCurriculum (){
+function renderCurriculum() {
   event.preventDefault();
 
   const curriculumNameElement = document.getElementById('curriculum-name');
-  if(curriculumNameElement){
+  if (curriculumNameElement) {
     alert('Currículo ja foi criado');
     return;
   }
@@ -91,7 +91,9 @@ function renderCurriculum (){
   const typeApartmentInputElement = document.getElementById('type-house');
   const resumeInputElement = document.getElementById('resume');
   const officeInputElement = document.getElementById('office');
-  const officeDescriptionInputElement = document.getElementById('office-description');
+  const officeDescriptionInputElement = document.getElementById(
+    'office-description'
+  );
   const dateInputElement = document.getElementById('date');
 
   let name = nameInputElement.value;
@@ -106,15 +108,27 @@ function renderCurriculum (){
   let date = dateInputElement.value;
   let type;
 
-  if(typeApartmentInputElement.value === 'on'){
+  if (typeApartmentInputElement.value === 'on') {
     type = 'Apartamento';
   }
 
-  if(typeHouseInputElement.value === 'on'){
+  if (typeHouseInputElement.value === 'on') {
     type = 'Casa';
   }
 
-  if(!name || !email || !cpf || !address || !city || !state || !type || !resume || !office || !officeDescription || !date){
+  if (
+    !name ||
+    !email ||
+    !cpf ||
+    !address ||
+    !city ||
+    !state ||
+    !type ||
+    !resume ||
+    !office ||
+    !officeDescription ||
+    !date
+  ) {
     alert('Necessário preencher as informações');
     return;
   }
@@ -143,7 +157,7 @@ function renderCurriculum (){
   stateElement.innerHTML = state;
   stateElement.id = 'curriculum-state';
 
-  const typeElement  = document.createElement('p');
+  const typeElement = document.createElement('p');
   typeElement.innerHTML = type;
   typeElement.id = 'curriculum-type';
 
@@ -152,7 +166,7 @@ function renderCurriculum (){
   resumeElement.id = 'curriculum-resume';
 
   const officeElement = document.createElement('p');
-  officeElement.innerHTML = office
+  officeElement.innerHTML = office;
   officeElement.id = 'curriculum-office';
 
   const officeDescriptionElement = document.createElement('p');
@@ -175,7 +189,7 @@ function renderCurriculum (){
   curriculumSession.appendChild(officeDescriptionElement);
 }
 
-function clearAllFields(){
+function clearAllFields() {
   event.preventDefault();
 
   const curriculumSession = document.getElementById('curriculum');
@@ -189,7 +203,9 @@ function clearAllFields(){
   const typeApartmentInputElement = document.getElementById('type-house');
   const resumeInputElement = document.getElementById('resume');
   const officeInputElement = document.getElementById('office');
-  const officeDescriptionInputElement = document.getElementById('office-description');
+  const officeDescriptionInputElement = document.getElementById(
+    'office-description'
+  );
   const dateInputElement = document.getElementById('date');
 
   curriculumSession.innerHTML = '';
