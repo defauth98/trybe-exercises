@@ -1,4 +1,4 @@
-const { obj1, obj2, obj3 } = require('./json');
+const { obj1, obj2, obj3 } = require('../json');
 
 describe('Compare dois objetos (JSON) para verificar se são idênticos ou não', () => {
   test('Verifique se o obj1 e igual ao obj2', () => {

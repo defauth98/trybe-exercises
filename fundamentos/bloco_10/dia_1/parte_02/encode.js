@@ -3,7 +3,9 @@ function encode(string) {
   let splitStringArray = string.split('');
 
   for (let index in splitStringArray) {
-    splitStringArray[index] = reference[splitStringArray[index]];
+    if (reference[splitStringArray[index]])
+      splitStringArray[index] = reference[splitStringArray[index]];
+    splitStringArray[index] = splitStringArray[index];
   }
 
   return splitStringArray.join('');

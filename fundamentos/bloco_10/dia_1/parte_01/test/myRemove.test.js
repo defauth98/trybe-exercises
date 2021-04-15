@@ -1,4 +1,4 @@
-const myRemove = require('./myRemove');
+const myRemove = require('../myRemove');
 
 describe('myRemove', () => {
   test('Verifique se a chamada myRemove([1, 2, 3, 4], 3) retorna o array esperado', () => {
