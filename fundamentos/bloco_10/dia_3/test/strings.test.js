@@ -36,4 +36,14 @@ describe('strings', () => {
     expect(strings.toUpperCase).toHaveBeenCalledTimes(1);
     expect(string).toBe('banana');
   });
+
+  it('should return a string in uppercase', () => {
+    strings.toUpperCase.mockImplementation((string) => string.toUpperCase());
+
+    const string = strings.toUpperCase('banana');
+
+    expect(strings.toUpperCase).toHaveBeenCalled();
+    expect(strings.toUpperCase).toHaveBeenCalledTimes(2);
+    expect(string).toBe('BANANA');
+  });
 });
