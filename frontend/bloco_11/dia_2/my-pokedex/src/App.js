@@ -1,5 +1,8 @@
+import React from 'react';
+import Pokedex from './components/Pokedex';
+
 function App() {
-  return <h1>Hello World</h1>;
+  return <Pokedex />;
 }
 
 export default App;
