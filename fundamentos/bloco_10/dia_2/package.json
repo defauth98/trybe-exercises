@@ -1,0 +1,19 @@
+{
+  "name": "dia_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "upppercase.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.6.3",
+    "node-fetch": "^2.6.1"
+  }
+}
