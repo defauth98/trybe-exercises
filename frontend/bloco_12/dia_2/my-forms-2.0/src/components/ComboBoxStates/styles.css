@@ -5,15 +5,11 @@
   border: none;
 }
 
-.form-line label {
+.form-line span {
   font-size: 20px;
 }
 
-.form-line input {
+.form-line select {
   font-size: 20px;
   padding: 4px;
-}
-
-.upper {
-  text-transform: uppercase;
 }
