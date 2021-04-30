@@ -1,0 +1,17 @@
+.form-line {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-line label {
+  font-size: 20px;
+}
+
+.form-line input {
+  font-size: 20px;
+  padding: 4px;
+}
+
+.upper {
+  text-transform: uppercase;
+}

@@ -1,10 +1,19 @@
-import './App.css';
+import FormLine from './components/FormLine';
+import './styles/global.css';
+import './styles.css';
 
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
+    <main>
+      <form action="">
+        <FormLine
+          inputName="Nome"
+          placeholder="Seu nome"
+          limit={40}
+          toUpperCase
+        />
+      </form>
+    </main>
   );
 }
 
