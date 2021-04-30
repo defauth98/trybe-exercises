@@ -4,29 +4,31 @@ import Pokemon from './Pokemon';
 import data from '../data';
 import './styles/pokedex.css';
 
-function Pokedex() {
-  function renderPokedex() {
-    const pokemons = data.map((item) => (
-      <Pokemon
-        name={item.name}
-        type={item.type}
-        value={item.value}
-        measurementUnit={item.measurementUnit}
-        image={item.image}
-        moreInfo={item.moreInfo}
-      />
-    ));
+class Pokedex extends React.Component {
+  constructor(props) {
+    super(props);
 
-    return pokemons;
+    this.state = {
+      pokemons: data,
+      currentIndex: 0,
+    };
   }
 
-  return (
-    <div className="pokedex">
-      <h1>Pokedex</h1>
+  renderPokemon() {
+    const pokemon = this.state.pokemons[this.state.currentIndex];
 
-      <div className="pokemons">{renderPokedex()}</div>
-    </div>
-  );
+    return <Pokemon pokemon={pokemon} />;
+  }
+
+  render() {
+    return (
+      <div className="pokedex">
+        <h1>Pokedex</h1>
+
+        <div className="pokemons">{this.renderPokemon()}</div>
+      </div>
+    );
+  }
 }
 
 export default Pokedex;

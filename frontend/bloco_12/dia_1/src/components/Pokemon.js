@@ -5,7 +5,14 @@ import './styles/pokemon.css';
 
 class Pokemon extends React.Component {
   render() {
-    const { name, type, value, measurementUnit, image, moreInfo } = this.props;
+    const {
+      name,
+      type,
+      value,
+      measurementUnit,
+      image,
+      moreInfo,
+    } = this.props.pokemon;
 
     return (
       <div className="pokemon">
@@ -23,12 +30,14 @@ class Pokemon extends React.Component {
 }
 
 Pokemon.propTypes = {
-  name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  value: PropTypes.number.isRequired,
-  measurementUnit: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  moreInfo: PropTypes.string.isRequired,
+  pokemon: PropTypes.objectOf({
+    name: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
+    value: PropTypes.number.isRequired,
+    measurementUnit: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    moreInfo: PropTypes.string.isRequired,
+  }),
 };
 
 export default Pokemon;
