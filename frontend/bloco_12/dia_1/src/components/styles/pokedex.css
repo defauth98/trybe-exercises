@@ -9,3 +9,31 @@
 .pokedex h1 {
   margin: 20px 0;
 }
+
+.buttons-container {
+  margin-top: 20px;
+}
+
+.buttons-container button,
+.pokedex button {
+  font-size: 30px;
+
+  margin-left: 10px;
+  padding: 4px;
+
+  background-color: darkcyan;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+#fire {
+  background-color: red;
+}
+
+#psychic {
+  background-color: deepskyblue;
+}
+
+.pokedex button {
+  margin-top: 40px;
+}
