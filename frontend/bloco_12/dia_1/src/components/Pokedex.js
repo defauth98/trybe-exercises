@@ -20,9 +20,11 @@ class Pokedex extends Component {
   }
 
   renderPokemon() {
-    const pokemon = this.state.pokemons[this.state.currentIndex];
+    if (this.state.pokemons) {
+      const pokemon = this.state.pokemons[this.state.currentIndex];
 
-    return <Pokemon pokemon={pokemon} />;
+      return <Pokemon pokemon={pokemon} />;
+    }
   }
 
   nextPokemon() {
@@ -44,6 +46,7 @@ class Pokedex extends Component {
 
     this.setState({
       pokemons: filteredPokemons,
+      currentIndex: 0,
     });
   }
 
