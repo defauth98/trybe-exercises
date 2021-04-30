@@ -1,0 +1,22 @@
+.pokedex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokedex h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.pokemons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+
+  width: 600px;
+
+  margin: 0 auto;
+}
