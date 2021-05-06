@@ -8,6 +8,7 @@ class App extends Component {
 
     this.fetchDog = this.fetchDog.bind(this);
     this.reloadDog = this.reloadDog.bind(this);
+    this.saveStorage = this.saveStorage.bind(this);
 
     this.state = {
       dog: '',
@@ -16,6 +17,33 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchDog();
+  }
+
+  shouldComponentUpdate() {
+    const { dog } = this.state;
+
+    if (dog.message && dog.message.includes('terrier')) {
+      return false;
+    }
+    return true;
+  }
+
+  componentDidUpdate() {
+    const { dog } = this.state;
+
+    this.saveStorage();
+
+    if (dog.message) {
+      const breed = dog.message && dog.message.split('/')[4];
+
+      if (breed) { alert(breed); }
+    }
+  }
+
+  saveStorage() {
+    const { dog } = this.state;
+
+    localStorage.setItem('dog', dog.message);
   }
 
   async fetchDog() {
