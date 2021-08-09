@@ -155,15 +155,15 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 - [x] 21-1: _Funções mais usadas no SQL_
 - [x] 21-2: _Descomplicando JOINs e UNIONs_
-- [ ] 21-3: _Stored Routines & Subqueries_
-- [ ] 21-4: _[Projeto - Vocabulary Booster]()_
+- [x] 21-3: _Stored Routines & Subqueries_
+- [x] 21-4: _[Projeto - Vocabulary Booster](https://github.com/tryber/sd-010-a-mysql-vocabulary-booster/pull/94)_
 
 ##### Bloco 22: Bancos de dados relacionais
 
-- [ ] 22-1: _Transformando ideias em um modelo de banco de dados_
-- [ ] 22-2: _Normalização, Formas Normais e Dumps_
-- [ ] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
-- [ ] 22-3: _[Projeto - One For All]()_
+- [x] 22-1: _Transformando ideias em um modelo de banco de dados_
+- [x] 22-2: _Normalização, Formas Normais e Dumps_
+- [x] 22-2: _Transformando ideias em um modelo de banco de dados - Parte 2_
+- [x] 22-3: _[Projeto - One For All](https://github.com/tryber/sd-010-a-mysql-one-for-all/pull/33)_
 
 ##### Bloco 23: Introdução - NoSQL
 
