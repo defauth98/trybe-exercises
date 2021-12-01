@@ -10,3 +10,5 @@ elif 7500 < salary <= 10500:
     position = "senior"
 else:
     position = "líder"
+
+print(salary)
